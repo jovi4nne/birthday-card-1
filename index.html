@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <!-- Google Font Pixel Art -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- POP-UP INITIAL SLIDES -->
+  <div id="popup-overlay" class="overlay">
+    
+    <!-- Pop-up 1 -->
+    <div id="popup-1" class="modal-box pixel-box animate-bounce-soft">
+      <p class="pixel-text">HAIHAIIII</p>
+      <button onclick="nextPopup(1)" class="pixel-btn">hawoo bebe</button>
+    </div>
+
+    <!-- Pop-up 2 -->
+    <div id="popup-2" class="modal-box pixel-box hidden animate-bounce-soft">
+      <p class="pixel-text">Seems like i was missing out on someone's Birthday</p>
+      <button onclick="nextPopup(2)" class="pixel-btn">iya bebe aku sedih:<</button>
+    </div>
+
+    <!-- Pop-up 3 -->
+    <div id="popup-3" class="modal-box pixel-box hidden animate-bounce-soft">
+      <p class="pixel-text">makanyh jgn bikin aq murka •`ᴖ´•</p>
+      <button onclick="closePopups()" class="pixel-btn">ywdsik!</button>
+    </div>
+
+  </div>
+
+  <!-- CONTAINER KARTU UTAMA -->
+  <div class="card-container">
+
+    <!-- PAGE 1: CAKE PAGE -->
+    <div id="page-1" class="page">
+      <div class="main-card">
+        <div class="header-box pixel-box animate-shake-soft">
+          <div class="title-area">
+            <h1 class="hbd-title">Happy Birthday!</h1>
+            <span class="sub-title">my one, beloved bebe:3</span>
+          </div>
+          <img src="images/avatar.png" alt="Character" class="header-avatar">
+        </div>
+        <div class="content-area">
+          <img src="images/birthcake.png" alt="Cake" class="cake-img animate-bounce-soft">
+        </div>
+      </div>
+      <div class="footer-area">
+        <button onclick="goToPage(2)" class="image-btn">
+          <img src="images/nextbutton.png" alt="Next">
+            </button>
+      </div>
+    </div>
+
+    <!-- PAGE 2: DOA-DOA & WISH FORM -->
+    <div id="page-2" class="page hidden">
+      <div class="main-card">
+        <div class="header-box pixel-box animate-shake-soft">
+          <div class="title-area">
+            <h1 class="hbd-title">Happy Birthday!</h1>
+            <span class="sub-title">my one, beloved bebe:3</span>
+          </div>
+          <img src="images/avatar.png" alt="Character" class="header-avatar">
+        </div>
+        <div class="content-area prayer-area">
+          <p class="prayer-text animate-bounce-soft">
+            Happi birthday baboi>/< I wish you maanyyy more amazing years to face through, may you be blessed with an endless wealth, always be good in health, i wish for a lot of happiness to find my baby, may every hard times you've been thru leads you to better days, i wish you to be surrounded of people who loves and adores you. Aku juga minta maaf yah kemarin ngambek terus soalnya km nyebelin hmph, i wish you'll never ever get tired of loving me, even after you saw my flaws, because i'll always love you in my lifetime. you da real art bebe, ILOAVYU SOMUCH MWAMWAMWA ૮ ˶ᵔ ᵕ ᵔ˶ ა
+          </p>
+        </div>
+      </div>
+      <div class="footer-area">
+        <button onclick="openWishModal()" class="image-btn">
+          <img src="images/nextbutton.png" alt="Next">
+          </button>
+      </div>
+    </div>
+
+    <!-- PAGE 3: FOTO FOTO & BEAVER SEAL EMBLEM -->
+    <div id="page-3" class="page hidden">
+      <div class="main-card">
+        <div class="header-box pixel-box animate-shake-soft">
+          <div class="title-area">
+            <h1 class="hbd-title">Happy Birthday!</h1>
+            <span class="sub-title">my one, beloved bebe</span>
+          </div>
+          <img src="images/avatar.png" alt="Character" class="header-avatar">
+        </div>
+        <div class="content-area gallery-area">
+          <div class="photo-grid animate-bounce-soft">
+            <img src="images/fotopubg.jpg" alt="Foto 1" class="gallery-img">
+            <img src="images/fotob.png" alt="Foto 2" class="gallery-img">
+          </div>
+          <div class="cute-emotes">
+            🦫 ❤️ 🦭
+          </div>
+        </div>
+      </div>
+      <div class="scrapbook-note">
+    bebe aku cuma bisa insert 2 foto soalnyh kalo lebih dari 2 gepeng, tapi aku bikin scrapbook lagi sih, bukanya di g-drive yah
+</div>
+    </div>
+
+  </div>
+
+  <!-- POP-UP INPUT WISH (DI PAGE 2) -->
+  <div id="wish-overlay" class="overlay hidden">
+    <div class="modal-box">
+      <p class="pixel-text">Ketik wishes kamuh bwt tahun enih!</p>
+      <input type="text" id="wish-input" placeholder="Ketik harapan kamu di sini..." class="pixel-input">
+      <button onclick="submitWish()" class="pixel-btn">aamiin!</button>
+    </div>
+  </div>
+  
+  <!-- AUDIO BACKGROUND -->
+<audio id="bg-music" loop>
+  <source src="images/love.mp3" type="audio/mpeg">
+  Browser kamu tidak mendukung pemutar audio.
+</audio>
+
+<!-- TOMBOL KONTROL MUSIK ESTETIK -->
+<button id="music-btn" onclick="toggleMusic()" class="pixel-btn" style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">
+  🎵 Play Music
+</button>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+html {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'KiwiSoda';
+  src: url('font/KiwiSoda.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Minecraft';
+  src: url('font/Minecraft.ttf') format('truetype');
+}
+
+.hbd-title, h1, h2, h3 {
+  font-family: 'KiwiSoda', cursive !important;
+}
+
+.pixel-text, 
+.pixel-btn, 
+.pixel-input, 
+.prayer-text, 
+.sub-title, 
+.next-page-btn, 
+button {
+  font-family: 'Minecraft', sans-serif !important;
+}
+
+* {
+  box-sizing: border-box;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'KiwiSoda', cursive;
+}
+
+/* KARTU LUAR (BACKGROUND LAYAR HP) */
+.card-container {
+  width: 100vw;
+  max-width: none;
+  height: 100vh;
+  background-image: url('images/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TIAP HALAMAN */
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* KOTAK GEDE DI TENGAH LAYAR */
+.main-card {
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 4px solid #ffffff;
+  border-radius: 20px;
+  padding: 15px;
+  width: 100%;
+  max-width: 330px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* KOTAK HEADER DI DALAM MAIN CARD */
+.header-box.pixel-box {
+  background-image: url('images/pixeltextbox.png') !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-image: none !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  
+  min-height: unset !important; 
+  height: 140px !important;
+  width: 300px !important;
+  
+  padding: 10px 20px 10px 20px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  overflow: hidden !important;
+}
+
+.hbd-title {
+  margin: 0;
+  font-family: 'KiwiSoda', cursive;
+  font-size: 35px;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #000;
+  letter-spacing: 5px;
+}
+
+.sub-title {
+  font-size: 10px;
+  color: #000;
+  display: block;
+  letter-spacing: 2px;
+  margin-top: 8px !important;
+}
+
+.header-avatar {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* CONTENT AREA */
+.content-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.cake-img {
+  width: 250px;
+  height: auto;
+}
+
+.prayer-text {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0,8px;
+  font-size: 9px;
+  text-align: center;
+  line-height: 1.4;
+  max-height: 320px !important;
+  overflow-y: auto !important;
+  letter-spacing: 1px;
+  line-height: 21px;
+}
+
+.photo-grid {
+  display: flex;
+  gap: 10px;
+}
+
+.gallery-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cute-emotes {
+  font-size: 28px;
+  margin-top: 15px;
+}
+
+/* FOOTER BUTTON (POSISI DI BAWAH KANAN DALAM CARD CONTAINER) */
+.footer-area {
+  width: 100%;
+  max-width: 330px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.next-page-btn, .pixel-btn {
+  font-family: 'KiwiSoda', cursive;
+  background-color: #d1e7ff;
+  border: 3px solid #1a0933;
+  box-shadow: 3px 3px 0px #1a0933;
+  padding: 6px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.next-page-btn:active, .pixel-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #1a0933;
+}
+
+/* Styling khusus untuk tombol berupa gambar */
+.image-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mengatur ukuran gambar tombol agar pas (bisa disesuaikan ukurannya) */
+.image-btn img {
+  width: 90px;  /* Atur lebar tombol sesuai keinginan */
+  height: auto;
+  image-rendering: pixelated; /* Menjaga gaya pixel art tetap tajam */
+}
+
+/* Efek saat tombol ditekan (sedikit mengecil/turun biar interaktif) */
+.image-btn:active {
+  transform: scale(0.95);
+}
+
+/* OVERLAY & MODAL POPUP */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-box {
+  background: #fff;
+  border: 4px solid #1a0933;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 280px;
+  width: 80%;
+  box-shadow: 5px 5px 0px #000;
+}
+
+/* Efek Border Pixel-Art Murni CSS */
+.pixel-box, .modal-box {
+  background-image: url('images/pixeltextbox.png') !important; /* Ganti dengan nama file PNG kamu */
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-image: none !important;
+  border-image-source: none !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  padding: 35px 20px !important;
+  min-height: 120px !important; /* Biar tingginya nggak gepeng ke bawah */
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.pixel-input {
+  width: 90%;
+  padding: 8px;
+  margin: 10px 0;
+  font-family: 'KiwiSoda', cursive;
+  border: 2px solid #000;
+  border-radius: 6px;
+}
+
+/* Mengubah modal-box jadi kotak kaku tanpa lengkungan */
+.modal-box {
+  border-radius: 0px !important;
+}
+
+.scrapbook-note {
+  text-align: right;
+  font-size: 12px;
+  color: #000000;
+  margin-top: 8px;
+  padding-right: 5px;
+  letter-spacing: 2px;
+  font-family: 'Minecraft', sans-serif !important;
+}
+
+/* Efek animasi bounce tipis-tipis */
+@keyframes softBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* Mantul ke atas setinggi 5 pixel */
+  }
+}
+
+/* Kelas siap pakai untuk animasi bounce */
+.animate-bounce-soft {
+  animation: softBounce 1.7s ease-in-out infinite !important;
+}
+
+/* Efek goyang yang lebih dinamis (miring dan geser) */
+@keyframes shakeSoft {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-2px, 2px) rotate(-1deg); }
+  40% { transform: translate(2px, -1px) rotate(1deg); }
+  60% { transform: translate(-1px, -2px) rotate(0deg); }
+  80% { transform: translate(1px, 2px) rotate(-1deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Kelas siap pakai */
+.animate-shake-soft {
+  animation: shakeSoft 3.2s ease-in-out infinite !important;
+}
+
+/* Efek transisi halaman muncul dari bawah dengan fade-in */
+@keyframes pageSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Mulai dari posisi agak di bawah */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Kembali ke posisi normal */
+  }
+}
+
+/* Terapkan ke kelas page ketika aktif */
+.page {
+  animation: pageSlideUp 0.4s ease-out forwards;
+}
+
+/* Efek khusus pop-up muncul dari bawah + fade-in */
+@keyframes popupSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95); /* Mulai dari bawah & agak kecil dikit */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);       /* Kembali ke ukuran & posisi normal */
+  }
+}
+
+/* Terapkan ke kotak modal pop-up */
+.modal-box {
+  animation: popupSlideUp 1.7s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+
+.hidden {
+  display: none !important;
+}
